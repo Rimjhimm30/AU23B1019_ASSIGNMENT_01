@@ -1,0 +1,12 @@
+def get_tshirt(brand_name, size):
+    get_name = input("name:")
+    brand_name = input("Enter brand: ")
+    size = input("Enter size : ")
+    available_brands = {"Adidas": ["L", "XL"],"puma": ["M", "L", "XL"],"lycra": ["S", "XL", "XXL"]}
+    if brand_name in available_brands:
+        if size in available_brands[brand_name]:
+            print("Hi",get_name," the brand" , brand_name, size, "you are looking for is available in our store")
+        else:
+            print("Hi,",get_name , " Unfortunately the brand",brand_name, "of" size, "you are looking for is not available in our store")
+    
+get_tshirt("brand_name", "size")
