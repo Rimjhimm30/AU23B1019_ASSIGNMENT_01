@@ -1,0 +1,9 @@
+def get_order(order):
+    for i in order:
+        print("Preparing your order :", i)
+    print("The following order has been dispatched.")
+    for j in order:
+        print("Order :", j)
+    return " "
+menu_items = ["Dal", "Rice", "Mix Veg"] 
+print(get_order(order))
