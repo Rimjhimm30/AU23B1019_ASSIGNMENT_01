@@ -1,0 +1,31 @@
+
+ASP= float(input("Enter Annual Site Profit: "))
+IC= float(input("Enter Improvement Cost: "))
+CCR= float(input("Enter Current Conversion Rate (in decimal): "))
+EPL= int(input("Enter Expected Project Life (in years): "))
+ICR= float(input("Enter Increase in Conversion Rate (in decimal): "))
+
+# Calculate the improved conversion rate
+ICR = CCR + ICR
+
+# Future Gain from Improvement formula
+future_gain = ((ASP * (ICR / CCR)) - ASP) * (((1 + ICR) * EPL)- 1) / ICR - IC * ((1 + ICR) * EPL)
+
+# Total Gain from Improvement
+total_gain = future_gain / ((1 + ICR) ** EPL)
+
+# Annual Gain from Improvement
+annual_gain = total_gain / EPL
+
+# Annual ROI
+annual_roi = annual_gain / IC
+
+# Total ROI
+total_roi = total_gain / IC
+
+
+print("Future Gain from improvement:",future_gain)
+print("Total Gain from improvement:",total_gain)
+print("Annual Gain from Improvement:", annual_gain)
+print("Annual ROI:", annual_roi)
+print("Total ROI:", total_roi)
